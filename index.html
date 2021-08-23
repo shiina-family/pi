@@ -4,19 +4,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
+
     <title>Pi</title>
+    
     <script type="text/javascript" src="./scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body onload="calcPi();">
-    <div style="text-align: center;">
+
+    <div class="wrapper">
         <canvas id="canvas-pi"></canvas>
-        <div style="width: 350px; margin: 0 auto;text-align: left;">
+        <div class="texts">
             <div>π = <span id="piValue"></span></div>
             <div>円内の点の数 = <span id="circleValue"></span></div>
             <div>全ての点の数 = <span id="totalValue"></span></div>
         </div>
     </div>
+
 </body>
 
 </html>
