@@ -55,10 +55,10 @@ function draw() {
     const tempX = getRandom(200) - 100;
     const tempY = getRandom(200) - 100;
 
-    ctx.fillStyle = "rgb(255,0,0)"
+    ctx.fillStyle = "rgb(255,128,128)"
     if ((tempX ** 2) + (tempY ** 2) < 100 ** 2) {
         In++;
-        ctx.fillStyle = "rgb(0,0,255)"
+        ctx.fillStyle = "rgb(128,128,255)"
         circle++;
     }
     total++;
@@ -76,12 +76,15 @@ function draw() {
 }
 
 function draw_init() {
+    ctx.fillStyle = "rgb(221,221,221)"
+    ctx.strokeStyle = "rgb(221,221,221)"
+    ctx.font = "20px serif";
+
     //x軸
     ctx.beginPath();
     ctx.moveTo(0, R);
     ctx.lineTo(CANVAS_WIDTH, R);
     ctx.stroke();
-    ctx.font = "20px serif";
     ctx.fillText("x", CANVAS_WIDTH - 20, R + 20);
 
     //y軸
@@ -113,6 +116,7 @@ function draw_init() {
         ctx.fillRect(screen.x, screen.y, 1, 1);
     }
 }
+
 
 function getRandom(max) {
     return Math.random() * max;
