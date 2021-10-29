@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html prefix="og: http://ogp.me/ns#">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
 
-    <title>Pi</title>
+    <title>Pi - shiina.family</title>
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:image"       content="/banner" />
+    <meta name="twitter:title"       content="Pi" />
+    <meta name="twitter:description" content="An inefficient Pi calculator using Monte Carlo method." />
+    <meta property="og:site_name"    content="shiina.family" />
+    <meta property="og:image"        content="/banner.png" />
+    <meta property="og:title"        content="Pi" />
+    <meta property="og:description"  content="An inefficient Pi calculator using Monte Carlo method." />
+    <meta name="description"         content="An inefficient Pi calculator using Monte Carlo method." />
     
     <link rel="stylesheet" href="./styles.css">
-    <script type="text/javascript" src="./scripts.js"></script>
+    <script type="module" src="./utils.js"></script>
+    <script type="module" src="./script.js"></script>
 </head>
 
-<body onload="calcPi();">
+<body>
 
     <div class="wrapper">
-        <canvas id="canvas-pi"></canvas>
+        <canvas id="canvas" width="400" height="400"></canvas>
         <div class="texts">
-            <div>π = <span id="piValue"></span></div>
-            <div>円内の点の数 = <span id="circleValue"></span></div>
-            <div>全ての点の数 = <span id="totalValue"></span></div>
+            <div>π ≈ <span id="piValue"></span></div>
+            <div>円内の点の数 = <span id="pointsInCircle"></span></div>
+            <div>全ての点の数 = <span id="pointsInTotal"></span></div>
         </div>
     </div>
 
 </body>
 
 </html>
+
